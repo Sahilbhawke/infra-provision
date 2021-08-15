@@ -1,0 +1,5 @@
+REGION : us-west-1
+KEYNAME : project
+SGNAME : QASG
+SUBID : subnet-00a042ac368484e26
+IMAGE : ami-04b6c97b14c54de18

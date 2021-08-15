@@ -1,0 +1,5 @@
+REGION : us-west-1
+KEYNAME : project
+SGNAME : DEVSG
+SUBID : subnet-0904acf10cbeeaba9
+IMAGE : ami-04b6c97b14c54de18

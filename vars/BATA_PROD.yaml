@@ -1,0 +1,5 @@
+REGION : us-west-1
+KEYNAME : project
+SGNAME : PRODSG
+SUBID : subnet-07554fbfedf7ff7da
+IMAGE : ami-04b6c97b14c54de18

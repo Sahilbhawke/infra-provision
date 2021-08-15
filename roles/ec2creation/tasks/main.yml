@@ -1,12 +1,15 @@
 ---
+- name: Read env variables
+  include_vars:
+    file: "vars/{{ PROJECT }}_{{ ENV }}.yaml"
 - ec2:
-    region: us-west-1
-    key_name: project
+    region: "{{ REGION }}"
+    key_name: "{{ KEYNAME }}"
     instance_type: t2.micro
-    image: ami-04b6c97b14c54de18
+    image: "{{ IMAGE }}"
     wait: yes
     group: 
-      - "DEVSG"
-    vpc_subnet_id: subnet-0904acf10cbeeaba9
+      - "{{ SGNAME }}"
+    vpc_subnet_id: "{{ SUBID }}"
     assign_public_ip: yes
 

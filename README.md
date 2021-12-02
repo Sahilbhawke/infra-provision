@@ -145,9 +145,10 @@ chart and deletes the release.
 
 ## Authors
 
-- [Bitcot](https://www.bitcot.com/) 
- ![Logo](https://ca.slack-edge.com/T038JGHAM-U10U9592T-7448ec25ea73-54)
+- [Bitcot](https://www.bitcot.com/)
+
+![Logo](https://ca.slack-edge.com/T038JGHAM-U10U9592T-7448ec25ea73-54)
 
 ## Contact
 
-Please reach out to us on `contact@bitcot.com`
+Please reach out to us for queries and questions on `contact@bitcot.com`

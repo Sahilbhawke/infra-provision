@@ -146,7 +146,7 @@ chart and deletes the release.
 
 - [Bitcot](https://www.bitcot.com/)
 
-![Logo](https://ca.slack-edge.com/T038JGHAM-U10U9592T-7448ec25ea73-54)
+  ![Logo](https://ca.slack-edge.com/T038JGHAM-U10U9592T-7448ec25ea73-54)
 
 ## Contact
 

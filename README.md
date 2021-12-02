@@ -57,7 +57,7 @@ Useful Helm Client Commands:
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm install --name my-release stable/wordpress
+$ helm install --name my-release Chart-name
 ```
 
 The command deploys WordPress on the Kubernetes cluster in the default

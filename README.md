@@ -81,7 +81,7 @@ The following table lists the configurable parameters of the Bitcot chart and th
 | Parameter                | Description             | Default        |
 | ------------------------ | ----------------------- | -------------- |
 | `replicaCount` |  | `1` |
-| `namespace` | `Kubernetes namespace` | `"bitcot"` |
+| `namespace` | Kubernetes namespace | `"bitcot"` |
 | `imagePullSecrets` |  | `[{"name": null}]` |
 | `imageCredentials.registry` |  | `null` |
 | `imageCredentials.username` |  | `null` |

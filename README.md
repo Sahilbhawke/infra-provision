@@ -80,57 +80,57 @@ The following table lists the configurable parameters of the Bitcot chart and th
 
 | Parameter                | Description             | Default        |
 | ------------------------ | ----------------------- | -------------- |
-| `replicaCount` |  | `1` |
+| `replicaCount` | Number of Pods to run | `1` |
 | `namespace` | Kubernetes namespace | `"bitcot"` |
-| `imagePullSecrets` |  | `[{"name": null}]` |
-| `imageCredentials.registry` |  | `null` |
-| `imageCredentials.username` |  | `null` |
-| `imageCredentials.password` |  | `null` |
-| `imageCredentials.email` |  | `null` |
-| `accessModes` |  | `["ReadWriteOnce"]` |
-| `imagePullPolicy` |  | `"Always"` |
-| `storage` |  | `"3Gi"` |
-| `wordpress.tier` |  | `"frontend"` |
-| `wordpress.service.port` |  | `80` |
-| `wordpress.service.targetPort` |  | `80` |
-| `wordpress.service.protocol` |  | `"TCP"` |
-| `wordpress.service.type` |  | `"LoadBalancer"` |
-| `wordpress.image` |  | `"wordpress:5.3"` |
-| `wordpress.resources.requests.memory` |  | `"500Mi"` |
-| `wordpress.resources.requests.cpu` |  | `"600m"` |
-| `wordpress.resources.limits.memory` |  | `"600Mi"` |
-| `wordpress.resources.limits.cpu` |  | `"750m"` |
-| `wordpress.secrets.WORDPRESS_DB_HOST` |  | `"bitcot-mysql"` |
-| `wordpress.secrets.WORDPRESS_DB_NAME` |  | `"know2"` |
-| `wordpress.secrets.WORDPRESS_DB_PASSWORD` |  | `"groot"` |
-| `wordpress.secrets.WORDPRESS_DB_USER` |  | `"wp_root"` |
-| `wordpress.containerPort` |  | `80` |
-| `wordpress.containerPorthttps` |  | `443` |
-| `wordpress.Volumes.name` |  | `"wordpress-persistent-storage"` |
-| `wordpress.Volumes.mountPath` |  | `"/var/www/html"` |
-| `Sidecar.name` |  | `"sidecar-container"` |
-| `Sidecar.image` |  | `"ubuntu:20.04"` |
-| `db.tier` |  | `"mysql"` |
-| `db.service.port` |  | `3306` |
-| `db.service.targetPort` |  | `3306` |
-| `db.service.protocol` |  | `"TCP"` |
-| `db.service.type` |  | `"ClusterIP"` |
-| `db.image` |  | `"mysql:5.6"` |
-| `db.resources.requests.memory` |  | `"500Mi"` |
-| `db.resources.requests.cpu` |  | `"600m"` |
-| `db.resources.limits.memory` |  | `"600Mi"` |
-| `db.resources.limits.cpu` |  | `"750m"` |
-| `db.secrets.MYSQL_DATABASE` |  | `"know2"` |
-| `db.secrets.MYSQL_PASSWORD` |  | `"groot"` |
-| `db.secrets.MYSQL_ROOT_PASSWORD` |  | `"groot"` |
-| `db.secrets.MYSQL_USER` |  | `"wp_root"` |
-| `db.containerPort` |  | `3306` |
-| `db.Volumes.name` |  | `"mysql-persistent-storage"` |
-| `db.Volumes.mountPath` |  | `"/var/lib/mysql"` |
-| `initContainers.name` |  | `"init-container-mysql"` |
-| `initContainers.image` |  | `"mysql:latest"` |
-| `initContainers.Volume.name` |  | `"db-dump"` |
-| `initContainers.Volume.mountPath` |  | `"/docker-entrypoint-initdb.d"` |
+| `imagePullSecrets` | Secret Name | `[{"name": null}]` |
+| `imageCredentials.registry` | Private Docker Registry | `null` |
+| `imageCredentials.username` | Registry Name | `null` |
+| `imageCredentials.password` | Registry Password | `null` |
+| `imageCredentials.email` | Registry E-mail | `null` |
+| `accessModes` | PVC Access mode | `["ReadWriteOnce"]` |
+| `imagePullPolicy` | Image pull policy | `"Always"` |
+| `storage` | PVC Storage | `"3Gi"` |
+| `wordpress.tier` | Label for Wordpress | `"frontend"` |
+| `wordpress.service.port` | Published Port | `80` |
+| `wordpress.service.targetPort` | Target Port | `80` |
+| `wordpress.service.protocol` | Port Protocol | `"TCP"` |
+| `wordpress.service.type` | Kubernetes Service type | `"LoadBalancer"` |
+| `wordpress.image` | Docker Image for Wordpress | `"wordpress:5.3"` |
+| `wordpress.resources.requests.memory` | Requests of Memory for worpdress | `"500Mi"` |
+| `wordpress.resources.requests.cpu` | Requests of CPU wordpress for wordpress | `"600m"` |
+| `wordpress.resources.limits.memory` | Limits Memory for wordpress | `"600Mi"` |
+| `wordpress.resources.limits.cpu` | Limits CPU for wordpress | `"750m"` |
+| `wordpress.secrets.WORDPRESS_DB_HOST` | DB Host of the application | `"db host"` |
+| `wordpress.secrets.WORDPRESS_DB_NAME` | DB Name of the application | `"db name"` |
+| `wordpress.secrets.WORDPRESS_DB_PASSWORD` | Passoword of the application | `"random 8 character long alphanumeric string"` |
+| `wordpress.secrets.WORDPRESS_DB_USER` | User of the application | `"user"` |
+| `wordpress.containerPort` | Service HTTP port | `80` |
+| `wordpress.containerPorthttps` | Service HTTPS port | `443` |
+| `wordpress.Volumes.name` | PVC Name for Wordpress | `"wordpress-persistent-storage"` |
+| `wordpress.Volumes.mountPath` | Volume Mount for Wordpress | `"/var/www/html"` |
+| `Sidecar.name` | Sidecar Name | `"sidecar-container"` |
+| `Sidecar.image` | Sidecar Image Used | `"ubuntu:20.04"` |
+| `db.tier` | Label for Mysql | `"mysql"` |
+| `db.service.port` | Published Port for mysql | `3306` |
+| `db.service.targetPort` | Target Port for mysql | `3306` |
+| `db.service.protocol` | Port Protocol | `"TCP"` |
+| `db.service.type` | Kubernetes Service type | `"ClusterIP"` |
+| `db.image` | Docker image for mysql | `"mysql:5.6"` |
+| `db.resources.requests.memory` | Requests of Memory for mysql | `"500Mi"` |
+| `db.resources.requests.cpu` | Requests of CPU wordpress for mysql | `"600m"` |
+| `db.resources.limits.memory` | Limits Memory for mysql | `"600Mi"` |
+| `db.resources.limits.cpu` | Limits CPU for mysql | `"750m"` |
+| `db.secrets.MYSQL_DATABASE` | Database name to create | `"know2"` |
+| `db.secrets.MYSQL_PASSWORD` | Password for the database | `"random 8 character long alphanumeric string"` |
+| `db.secrets.MYSQL_ROOT_PASSWORD` | Mysql admin password | `"random 8 character long alphanumeric string"` |
+| `db.secrets.MYSQL_USER` | Database user to create | `"wp_root"` |
+| `db.containerPort` | Database port number | `3306` |
+| `db.Volumes.name` | PVC Name for Mysql | `"mysql-persistent-storage"` |
+| `db.Volumes.mountPath` | Volume Mount for Mysql | `"/var/lib/mysql"` |
+| `initContainers.name` | Init Container Name | `"init-container-mysql"` |
+| `initContainers.image` | Docker Image for Init Container | `"mysql:latest"` |
+| `initContainers.Volume.name` | Volume Name | `"db-dump"` |
+| `initContainers.Volume.mountPath` | Volume Mount for Init Container | `"/docker-entrypoint-initdb.d"` |
 
 ## Uninstalling the Chart
 
